@@ -1,1 +1,1 @@
-# hello
+# Welcome to Rate My UCI
