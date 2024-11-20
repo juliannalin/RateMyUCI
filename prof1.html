@@ -1,13 +1,95 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .fa-star
+            {
+                color: gray;
+            }
+            .checked 
+            {
+                color: gold;
+            }
+            </style>
+        <script>
+            function yesOrNo()
+            {
+                const yesButton = document.getElementById("yes");
+                const noButton = document.getElementById("no");
+                const result = document.getElementById("result");
+
+                if (yesButton.checked)
+                {
+                    result.textContent = "Scroll down for questions";
+                }
+                else if (noButton.checked)
+                {
+                    result.textContent = "Scroll down to view other reviews, or navigate to the next page";
+                }
+                else
+                {
+                    result.textContent = "Please pick an option";
+                }
+            }
+        </script>
+        <!--stars for loop to calculate the total-->
+        <script>
+            function rate(numStars)
+            {
+                for (let i = 1; i <=5; i++)
+                {
+                    const stars = document.getElementById("stars" + i);
+                    if (i <= numStars)
+                    {
+                        stars.classList.add("checked");
+                    }
+                    else
+                    {
+                        stars.classList.remove("checked")
+                    }
+                }
+                document.getElementById("rating-value").textContent = numStars;
+            }
+        </script>
     </head>
 <body>
 
-<h1>Shanno Alfaro</h1>
+<!--yes or no if statement-->
+    <h1 style="text-align: center; margin: 20px; padding: 10px;">Shannon Alfaro</h1>
+<label for="yes_no_radio">Want to leave a comment?</label>
+<p>
+    <input type="radio" id="yes" name="yes_no">Yes</input>
+</p>
+<p>
+    <input type="radio" id="no" name="yes_no">No</input>
+</p>
+<button onclick="yesOrNo()">Submit</button>
+    <p id="result"></p>
+<!--enter photo here-->
+<br /> 
 <p class="bold-paragraph">
-    Enter rating for <b id="bold">prof</b> here (stars):
+    Enter rating for <b id="bold">Professor Alfaro</b> here (stars):
   </p>
+<div id="rating">
+    <button onclick="rate(1)">
+        <span class="fa fa-star" id="stars1"></span>
+    </button>
+    <button onclick="rate(2)">
+        <span class="fa fa-star" id="stars2"></span>
+    </button>
+    <button onclick="rate(3)">
+        <span class="fa fa-star" id="stars3"></span>
+    </button>
+    <button onclick="rate(4)">
+        <span class="fa fa-star" id="stars4"></span>
+    </button>
+    <button onclick="rate(5)">
+        <span class="fa fa-star" id="stars5"></span>
+    </button>
+</div>
+<p>Total rating: <span id="rating-value">0</span></p>
+
   <p>What class:</p>
   <p>Difficulty level of the class (on a scale of 1-10 with 10 meaning it's impossible to pass):</p>
   <p>Would you take the class again (enter yes or no):</p>
