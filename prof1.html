@@ -52,47 +52,73 @@
                 document.getElementById("rating-value").textContent = numStars;
             }
         </script>
+        <!--class name storage-->
+        <script>
+            function storeUserInput()
+            {
+                const userInput = document.getElementById("userInput");
+                const className = userInput.value
+                document.getElementById("displayClassName").innerText = className;
+            }
+        </script>
+        <!--Difficulty level storage-->
+        <script>
+            function storeInputDifficulty()
+            {
+                const inputDiff = document.getElementById("inputDiff");
+                const diffLevel = inputDiff.value
+                document.getElementById("displayDiffLevel").innerText = inputDiff;
+            }
+        </script>
     </head>
 <body>
 
-<!--yes or no if statement-->
-    <h1 style="text-align: center; margin: 20px; padding: 10px;">Shannon Alfaro</h1>
-<label for="yes_no_radio">Want to leave a comment?</label>
-<p>
-    <input type="radio" id="yes" name="yes_no">Yes</input>
-</p>
-<p>
-    <input type="radio" id="no" name="yes_no">No</input>
-</p>
-<button onclick="yesOrNo()">Submit</button>
-    <p id="result"></p>
-<!--enter photo here-->
-<br /> 
-<p class="bold-paragraph">
-    Enter rating for <b id="bold">Professor Alfaro</b> here (stars):
-  </p>
-<div id="rating">
-    <button onclick="rate(1)">
-        <span class="fa fa-star" id="stars1"></span>
-    </button>
-    <button onclick="rate(2)">
-        <span class="fa fa-star" id="stars2"></span>
-    </button>
-    <button onclick="rate(3)">
-        <span class="fa fa-star" id="stars3"></span>
-    </button>
-    <button onclick="rate(4)">
-        <span class="fa fa-star" id="stars4"></span>
-    </button>
-    <button onclick="rate(5)">
-        <span class="fa fa-star" id="stars5"></span>
-    </button>
-</div>
-<p>Total rating: <span id="rating-value">0</span></p>
+    <!--yes or no if statement-->
+        <h1 style="text-align: center; margin: 20px; padding: 10px;">Shannon Alfaro</h1>
+    <label for="yes_no_radio">Want to leave a comment?</label>
+    <p>
+        <input type="radio" id="yes" name="yes_no">Yes</input>
+    </p>
+    <p>
+        <input type="radio" id="no" name="yes_no">No</input>
+    </p>
+    <button onclick="yesOrNo()">Submit</button>
+        <p id="result"></p>
+    <!--enter photo here-->
+    <br /> 
+    <p class="bold-paragraph">
+        Enter rating for <b id="bold">Professor Alfaro</b> here (stars):
+    </p>
+    <div id="rating">
+        <button onclick="rate(1)">
+            <span class="fa fa-star" id="stars1"></span>
+        </button>
+        <button onclick="rate(2)">
+            <span class="fa fa-star" id="stars2"></span>
+        </button>
+        <button onclick="rate(3)">
+            <span class="fa fa-star" id="stars3"></span>
+        </button>
+        <button onclick="rate(4)">
+            <span class="fa fa-star" id="stars4"></span>
+        </button>
+        <button onclick="rate(5)">
+            <span class="fa fa-star" id="stars5"></span>
+        </button>
+    </div>
+    <p>Total rating: <span id="rating-value">0</span></p>
 
-  <p>What class:</p>
-  <p>Difficulty level of the class (on a scale of 1-10 with 10 meaning it's impossible to pass):</p>
-  <p>Would you take the class again (enter yes or no):</p>
-  <p>Other comments (or N/A):</p>
+    <label for="userInput"></label>Class name: </label>
+    <input type = "text" id="userInput">
+    <button onclick="storeUserInput()">Submit</button>
+    <p id="displayClassName"></p>
+    
+    <label for="inputDiff"></label>Difficulty level of the class:</label>
+    <input type="text" id="inputDiff">
+    <button onclick="storeInputDifficulty()">Submit</button>
+    <p id="displayDiffLevel"></p>
+
+    <p>Would you take the class again (enter yes or no):</p>
+    <p>Other comments (or N/A):</p>
 </body>
 </html>
