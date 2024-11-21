@@ -13,6 +13,13 @@
             }
             </style>
         <script>
+            
+            let numStars = 0;
+            let className = "";
+            let diffLevel = "";
+            let result2 = "";
+            let comment = "";
+
             function yesOrNo()
             {
                 const yesButton = document.getElementById("yes");
@@ -32,11 +39,10 @@
                     result.textContent = "Please pick an option";
                 }
             }
-        </script>
-        <!--stars for loop to calculate the total-->
-        <script>
-            function rate(numStars)
+        
+            function rate(stars)
             {
+                numStars = stars;
                 for (let i = 1; i <=5; i++)
                 {
                     const stars = document.getElementById("stars" + i);
@@ -51,23 +57,64 @@
                 }
                 document.getElementById("rating-value").textContent = numStars;
             }
-        </script>
-        <!--class name storage-->
-        <script>
+        
             function storeUserInput()
             {
                 const userInput = document.getElementById("userInput");
-                const className = userInput.value
-                document.getElementById("displayClassName").innerText = className;
+                className = userInput.value
             }
-        </script>
-        <!--Difficulty level storage-->
-        <script>
+       
             function storeInputDifficulty()
             {
                 const inputDiff = document.getElementById("inputDiff");
-                const diffLevel = inputDiff.value
-                document.getElementById("displayDiffLevel").innerText = inputDiff;
+                diffLevel = inputDiff.value
+            }
+        
+        
+            function yesOrNoClass()
+            {
+                const yesButton = document.getElementById("yes2");
+                const noButton = document.getElementById("no2");
+                if (yesButton.checked)
+                {
+                    result2 = "Yes";
+                }
+                else if (noButton.checked)
+                {
+                    result2 = "No";                
+                }
+            }
+        
+            function otherComments()
+            {
+                const userComment = document.getElementById("userComment");
+                comment = userComment.value
+            }
+        
+            function displaySubmission()
+            {
+                //document.getElementById("rating-value").textContent = numStars;
+                //document.getElementById("displayClassName").innerText = className;
+                //document.getElementById("displayDiffLevel").innerText = diffLevel;
+                //document.getElementById("result2").textContent = result2;
+                //document.getElementById("commentDisplay").innerText = comment;
+
+                const submissionArea = document.getElementById("submission"); // Correct reference to submission area
+
+                submissionArea.innerHTML = "";
+
+                const submission = document.createElement("div");
+                submission.classList.add("submission");
+                submission.innerHTML = `
+                    <p><strong>Class Name:</strong> ${className}</p>
+                    <p><strong>Difficulty Level:</strong> ${diffLevel}</p>
+                    <p><strong>Would you take the class again?</strong> ${result2}</p>
+                    <p><strong>Other comments:</strong> ${comment}</p>
+                `;
+
+                submissionArea.appendChild(submission);
+
+                document.getElementById("rating-value").textContent = numStars;
             }
         </script>
     </head>
@@ -75,7 +122,8 @@
 
     <!--yes or no if statement-->
         <h1 style="text-align: center; margin: 20px; padding: 10px;">Shannon Alfaro</h1>
-    <label for="yes_no_radio">Want to leave a comment?</label>
+    
+    <label for="yes_no_radio">Want to leave a review?</label>
     <p>
         <input type="radio" id="yes" name="yes_no">Yes</input>
     </p>
@@ -86,6 +134,7 @@
         <p id="result"></p>
     <!--enter photo here-->
     <br /> 
+    <!--star rating-->
     <p class="bold-paragraph">
         Enter rating for <b id="bold">Professor Alfaro</b> here (stars):
     </p>
@@ -106,19 +155,41 @@
             <span class="fa fa-star" id="stars5"></span>
         </button>
     </div>
-    <p>Total rating: <span id="rating-value">0</span></p>
-
-    <label for="userInput"></label>Class name: </label>
+    <br />
+    <!--name of class-->
+    <label for="userInput">Class name: </label>
     <input type = "text" id="userInput">
     <button onclick="storeUserInput()">Submit</button>
     <p id="displayClassName"></p>
     
-    <label for="inputDiff"></label>Difficulty level of the class:</label>
+    <!--Difficulty level-->
+    <label for="inputDiff">Difficulty level of the class:</label>
     <input type="text" id="inputDiff">
     <button onclick="storeInputDifficulty()">Submit</button>
     <p id="displayDiffLevel"></p>
 
-    <p>Would you take the class again (enter yes or no):</p>
-    <p>Other comments (or N/A):</p>
+    <!--Take class again?-->
+    <label for="yes_no_radio">Would you take the class again?</label>
+    <p>
+        <input type="radio" id="yes2" name="yes_no">Yes</input>
+    </p>
+    <p>
+        <input type="radio" id="no2" name="yes_no">No</input>
+    </p>
+    <button onclick="yesOrNoClass()">Submit</button>
+    <p id="result2"></p>
+
+    <!--other comments the user might want to add-->
+    <label for="userComment">Other comments (or N/A):</label>
+    <input type="text" id="userComment">
+    <button onclick="otherComments()">Submit</button>
+    <p id="commentDisplay"></p>
+
+    <!-- Submit all button -->
+    <button onclick="displaySubmission()">Submit All</button>
+
+    <!-- Display all submissions -->
+    <div id="submission" style="margin-top: 20px;"></div>
+    <p>Total rating: <span id="rating-value">0</span></p>
 </body>
 </html>
