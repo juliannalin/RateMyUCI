@@ -1,0 +1,21 @@
+/*Stylesheet for overall website aesethic*/
+
+nav {
+    text-align: center;
+    overflow: hidden;
+    background-color: bisque;
+}
+
+nav ul li {
+    display: inline;
+    padding: .2em 1em; /*T and B, L and R*/
+    font-size: 1.35em
+}
+
+header{
+    text-align: center;
+}
+
+body {
+    background: white
+}
