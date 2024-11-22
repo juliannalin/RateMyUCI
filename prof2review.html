@@ -17,93 +17,93 @@
 </head>
 <body>
     <h1>Pierre Baldi Reviews</h1>
-    <div id="reviewsContainer" style="margin-top: 20px;"></div>
-    <div id="stars"></div>
-    <div id="classNameDisplay"></div>
-    <div id="diffLevelDisplay"></div>
-    <div id="classAgain"></div>
-    <div id="display"></div>
+    <div id="reviewsContainer1" style="margin-top: 20px;"></div>
+    <div id="stars1"></div>
+    <div id="classNameDisplay1"></div>
+    <div id="diffLevelDisplay1"></div>
+    <div id="classAgain1"></div>
+    <div id="display1"></div>
     
     <!--<p>Rating: <span id="rating-value">0</span></p>-->
     <script>
         //stars rating
-        let numStars = localStorage.getItem("numStars");
-        if (numStars)
+        let numStars1 = localStorage.getItem("numStars1");
+        if (numStars1)
         {
             //document.getElementById('stars').innerText = "Stars: " + numStars;
             //console.log(numStars)
-            const starsDiv = document.getElementById("stars");
+            const starsDiv = document.getElementById("stars1");
             for (let i = 1; i <=5; i++)
             {
-                const star = document.createElement("span");
-                star.classList.add("fa-star");
-                star.textContent = "★";
-                star.classList.remove("checked");
+                const star1 = document.createElement("span");
+                star1.classList.add("fa-star");
+                star1.textContent = "★";
+                star1.classList.remove("checked");
                     
-                if (i <= numStars)
+                if (i <= numStars1)
                 {
-                    star.classList.add("checked");
+                    star1.classList.add("checked");
                 }
 
-                starsDiv.appendChild(star);
+                starsDiv.appendChild(star1);
 
             }
-            console.log(numStars);
+            console.log(numStars1);
         }
         else
         {
-            document.getElementById('stars').innerText = "Stars: 0"
+            document.getElementById('stars1').innerText = "Stars: 0"
             console.log("no stars")
         }
         //diff level display
-        let diffLevel = localStorage.getItem("userDifficultyLevel");
-        if (diffLevel)
+        let diffLevel1 = localStorage.getItem("userDifficultyLevel1");
+        if (diffLevel1)
         {
-            document.getElementById('diffLevelDisplay').innerText = "Difficulty level of class: " + diffLevel;
-            console.log(diffLevel);
+            document.getElementById('diffLevelDisplay1').innerText = "Difficulty level of class: " + diffLevel1;
+            console.log(diffLevel1);
         }
         else
         {
-            document.getElementById('diffLevelDisplay').innerText = "No difficulty level inputed";
+            document.getElementById('diffLevelDisplay1').innerText = "No difficulty level inputed";
             console.log("No diff level")
         }
         
         //class Name display
-        let className = localStorage.getItem("userClassName");
-        if (className)
+        let className1 = localStorage.getItem("userClassName1");
+        if (className1)
         {
-            document.getElementById('classNameDisplay').innerText = "Class Name: " + className;
-            console.log(className);
+            document.getElementById('classNameDisplay1').innerText = "Class Name: " + className1;
+            console.log(className1);
         }
         else
         {
-            document.getElementById('classNameDisplay').innerText = "No class name received";
+            document.getElementById('classNameDisplay1').innerText = "No class name received";
             console.log("No class name");
         }
         
         //would you take the class again display
-        let result2 = localStorage.getItem("takeClassAgain");
-        if (result2)
+        let result21 = localStorage.getItem("takeClassAgain1");
+        if (result21)
         {
-            document.getElementById('classAgain').innerText = "Take class again? " + result2
-            console.log(result2)
+            document.getElementById('classAgain1').innerText = "Take class again? " + result21
+            console.log(result21)
         }
         else
         {
-            document.getElementById('classAgain').innerText = "User hasn't determined whether they would like to take the class again"
+            document.getElementById('classAgain1').innerText = "User hasn't determined whether they would like to take the class again"
             console.log("No input")
         }
         
         //other comments
-        let comment = localStorage.getItem("otherComments");
-        if (comment) 
+        let comment1 = localStorage.getItem("otherComments1");
+        if (comment1) 
         {
-            document.getElementById('display').innerText = "Other comments (or N/A): " + comment 
-            console.log(comment);
+            document.getElementById('display1').innerText = "Other comments (or N/A): " + comment1 
+            console.log(comment1);
         }
         else
         {
-            document.getElementById('display').innerText = "No other comments received";
+            document.getElementById('display1').innerText = "No other comments received";
             console.log("No other comments")
         }
 
