@@ -67,7 +67,9 @@ ul li{
     font-size: 1.25em;
     font-weight: 10;
 }
-
+ul li p {
+    font-size: .7em;
+}
 
 .uci-header {
     color: #274C77;
