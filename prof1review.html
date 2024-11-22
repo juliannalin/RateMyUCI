@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        
+        .fa-star
+        {   
+            font-size: 25px;
+            color: gray;
+        }
+        .checked 
+        {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reviews</h1>
+    <div id="stars"></div>
+    <div id="classNameDisplay"></div>
+    <div id="diffLevelDisplay"></div>
+    <div id="classAgain"></div>
+    <div id="display"></div>
+    
+    <!--<p>Rating: <span id="rating-value">0</span></p>-->
+    <script>
+
+        //stars rating
+        let numStars = localStorage.getItem("numStars");
+        if (numStars)
+        {
+            //document.getElementById('stars').innerText = "Stars: " + numStars;
+            //console.log(numStars)
+            const starsDiv = document.getElementById('stars');
+            for (let i = 1; i <=5; i++)
+            {
+                const star = document.createElement("span");
+                star.classList.add("fa-star");
+                star.textContent = "★";
+                star.classList.remove("checked");
+                    
+                if (i <= numStars)
+                {
+                    star.classList.add("checked");
+                }
+
+                starsDiv.appendChild(star);
+
+            }
+            console.log(numStars);
+        }
+        else
+        {
+            document.getElementById('stars').innerText = "Stars: 0"
+            console.log("no stars")
+        }
+        //diff level display
+        let diffLevel = localStorage.getItem("userDifficultyLevel");
+        if (diffLevel)
+        {
+            document.getElementById('diffLevelDisplay').innerText = "Difficulty level of class: " + diffLevel;
+            console.log(diffLevel);
+        }
+        else
+        {
+            document.getElementById('diffLevelDisplay').innerText = "No difficulty level inputed";
+            console.log("No diff level")
+        }
+        
+        //class Name display
+        let className = localStorage.getItem("userClassName");
+        if (className)
+        {
+            document.getElementById('classNameDisplay').innerText = "Class Name: " + className;
+            console.log(className);
+        }
+        else
+        {
+            document.getElementById('classNameDisplay').innerText = "No class name received";
+            console.log("No class name");
+        }
+        
+        //would you take the class again display
+        let result2 = localStorage.getItem("takeClassAgain");
+        if (result2)
+        {
+            document.getElementById('classAgain').innerText = "Take class again? " + result2
+            console.log(result2)
+        }
+        else
+        {
+            document.getElementById('classAgain').innerText = "User hasn't determined whether they would like to take the class again"
+            console.log("No input")
+        }
+        
+        //other comments
+        let comment = localStorage.getItem("otherComments");
+        if (comment) 
+        {
+            document.getElementById('display').innerText = "Other comments (or N/A): " + comment 
+            console.log(comment);
+        }
+        else
+        {
+            document.getElementById('display').innerText = "No other comments received";
+            console.log("No other comments")
+        }
+
+    </script>
+
+
+
+</body>
+</html>
