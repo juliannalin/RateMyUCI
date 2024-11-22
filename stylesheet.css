@@ -3,19 +3,45 @@
 nav {
     text-align: center;
     overflow: hidden;
-    background-color: bisque;
+    background-color: #8E7C93;
 }
 
 nav ul li {
     display: inline;
     padding: .2em 1em; /*T and B, L and R*/
-    font-size: 1.35em
+    font-size: 1.35em;
 }
 
-header{
+a {
+    color: #E7ECEF;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+header {
     text-align: center;
 }
 
+p {
+    font-family: sans-serif;
+}
+
 body {
-    background: white
+    background: #E7ECEF;
+}
+
+.alike-regular {
+    font-family: "Alike", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+footer{
+    text-align: center;
+    padding: 1em;
+    margin: 1em 0em;
+    line-height: 1.1em;
+    color: #E7ECEF;
+    clear: both;
+    background-color: #0064A4;
 }
