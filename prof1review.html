@@ -3,50 +3,88 @@
 <head>
     <title>Page Title</title>
     <style>
-        .checked
+        /*.checked
         {
             color: gold;
-        }
+        }*/
     </style>
 </head>
 <body>
-    <h1>Review</h1>
-    <div id="display">
-        <span id="stars1">★</span>
-        <span id="stars2">★</span>
-        <span id="stars3">★</span>
-        <span id="stars4">★</span>
-        <span id="stars5">★</span>
-    </div>
-    <p>Rating: <span id="rating-value">0</span></p>
+    <h1>Reviews</h1>
+    <div id="classNameDisplay"></div>
+    <div id="diffLevelDisplay"></div>
+    <div id="classAgain"></div>
+    <div id="display"></div>
+    
+    <!--<p>Rating: <span id="rating-value">0</span></p>-->
     <script>
         //total rating 
-        const savedStars = localStorage.getItem("numStars");
-        if (savedStars)
-        {
-            const numStars = parseInt(savedStars, 10);
+        //const savedStars = localStorage.getItem("numStars");
+        //if (savedStars)
+        //{
+            //const numStars = parseInt(savedStars, 10);
 
-            for (let i = 1; i <=5; i++)
-                {
-                    const stars = document.getElementById("stars" + i);
-                    if (i <= numStars)
-                    {
-                        stars.classList.add("checked");
-                    }
-                    else
-                    {
-                        stars.classList.remove("checked")
-                    }
-                }
-            document.getElementById("rating-value").textContent
-            console.log(numStars);
+            //for (let i = 1; i <=5; i++)
+                //{
+                    //const stars = document.getElementById("stars" + i);
+                    //if (i <= numStars)
+                    //{
+                        //stars.classList.add("checked");
+                    //}
+                    //else
+                    //{
+                        //stars.classList.remove("checked")
+                    //}
+                //}
+            //document.getElementById("rating-value").textContent
+            //console.log(numStars);
+        //}
+        //else
+        //{
+            //console.log("No stars rating")
+        //}
+
+        //diff level display
+        let diffLevel = localStorage.getItem("userDifficultyLevel");
+        if (diffLevel)
+        {
+            document.getElementById('diffLevelDisplay').innerText = "Difficulty level of class: " + diffLevel;
+            console.log(diffLevel);
         }
         else
         {
-            console.log("No stars rating");
+            document.getElementById('diffLevelDisplay').innerText = "No difficulty level inputed";
+            console.log("No diff level")
         }
+        
+        //class Name display
+        let className = localStorage.getItem("userClassName");
+        if (className)
+        {
+            document.getElementById('classNameDisplay').innerText = "Class Name: " + className;
+            console.log(className);
+        }
+        else
+        {
+            document.getElementById('classNameDisplay').innerText = "No class name received";
+            console.log("No class name");
+        }
+        
+        //would you take the class again display
+        let result2 = localStorage.getItem("takeClassAgain");
+        if (result2)
+        {
+            document.getElementById('classAgain').innerText = "Take class again? " + result2
+            console.log(result2)
+        }
+        else
+        {
+            document.getElementById('classAgain').innerText = "User hasn't determined whether they would like to take the class again"
+            console.log("No input")
+        }
+        
         //other comments
-        let comment = localStorage.getItem("otherComments")
+        let comment = localStorage.getItem("otherComments");
         if (comment) 
         {
             document.getElementById('display').innerText = "Other comments (or N/A): " + comment 

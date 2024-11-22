@@ -63,24 +63,29 @@
                 document.getElementById("rating-value").textContent = numStars;
                 console.log(numStars);
             }
-        
+            //class name input function
             function storeUserInput()
             {
                 const userInput = document.getElementById("userInput");
-                className = userInput.value
+                let className = userInput.value
+                localStorage.setItem("userClassName",className)
+                console.log(className)
             }
-       
+            //diff level of the class
             function storeInputDifficulty()
             {
                 const inputDiff = document.getElementById("inputDiff");
-                diffLevel = inputDiff.value
+                let diffLevel = inputDiff.value
+                localStorage.setItem("userDifficultyLevel",diffLevel)
+                console.log(diffLevel)
             }
         
-        
+            //yes or no to the question of whether the user would take the class again
             function yesOrNoClass()
             {
                 const yesButton = document.getElementById("yes2");
                 const noButton = document.getElementById("no2");
+                let result2;
                 if (yesButton.checked)
                 {
                     result2 = "Yes";
@@ -89,6 +94,9 @@
                 {
                     result2 = "No";                
                 }
+
+                localStorage.setItem("takeClassAgain",result2);
+                console.log(result2);
             }
         
             function otherComments()
@@ -112,6 +120,7 @@
                     <p><strong>Difficulty Level:</strong> ${diffLevel}</p>
                     <p><strong>Would you take the class again?</strong> ${result2}</p>
                     <p><strong>Other comments:</strong> ${comment}</p>
+                    <p><strong>Rating:</strong> ${numStars}</p>
                 `;
 
                 submissionArea.appendChild(submission);
@@ -158,10 +167,6 @@
             <span class="fa fa-star" id="stars5"></span>
         </button>
         <!--<p>Total rating: <span id="rating-value">0</span></p>-->
-        <br />
-        <br />
-        <button onclick="rate()">Submit</button>
-        <p id="rating-value"></p>
     </div>
     <br />
     <!--name of class-->
