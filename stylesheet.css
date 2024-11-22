@@ -61,6 +61,14 @@ header h3 {
 
 }
 
+ul li{
+    font-family: sans-serif;
+    padding: .5em 1em; /*T and B, L and R*/
+    font-size: 1.25em;
+    font-weight: 10;
+}
+
+
 .uci-header {
     color: #274C77;
     font-weight: bold;
@@ -68,11 +76,14 @@ header h3 {
 
 p {
     font-family: sans-serif;
+    text-align: left;
+}
+.home {
+    padding-left: 2.5em
 }
 
 body {
     background: #E7ECEF;
-    margin: 20px;
 
 }
 
