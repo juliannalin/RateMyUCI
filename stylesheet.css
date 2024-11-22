@@ -43,13 +43,16 @@ header h1 {
 
 h2 {
     /*header of every page*/
-    font-family: sans-serif;
+    font-family: 'alike', serif;
     font-size: 30px;
     font-weight: 25;
     text-align: left-align;
     padding-left: 2.5em;
     margin-top: 1.1em;
+    color: #274C77;
 }
+
+
 
 header h3 {
     font-family: sans-serif;
@@ -70,6 +73,12 @@ p {
 body {
     background: #E7ECEF;
     margin: 20px;
+    padding: 30em;
+
+}
+
+label {
+    font-size: 1.2em;
 }
 
 .alike-regular {
