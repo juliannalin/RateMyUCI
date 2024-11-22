@@ -17,7 +17,12 @@ nav ul li {
     display: inline;
     padding: .2em 1em; /*T and B, L and R*/
     font-size: 1.35em;
+
     
+}
+
+nav a:hover {
+    color: #274C77;
 }
 
 a {
