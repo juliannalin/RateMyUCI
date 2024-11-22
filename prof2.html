@@ -43,14 +43,14 @@
             </style>
         <script>
             
-            let numStars = 0;
-            let className = "";
-            let diffLevel = "";
-            let result2 = "";
-            let comment = "";
+            let numStars1 = 0;
+            let className1 = "";
+            let diffLevel1 = "";
+            let result21 = "";
+            let comment1 = "";
 
             //yes or no function for "want to leave a review"
-            function yesOrNo()
+            function yesOrNo1()
             {
                 const yesButton = document.getElementById("yes");
                 const noButton = document.getElementById("no");
@@ -71,77 +71,77 @@
             }
             
             //rating (stars)
-            function rate(stars)
+            function rate1(stars)
             {
-                let numStars = stars;
+                let numStars1 = stars;
 
-                localStorage.setItem("numStars",numStars);
+                localStorage.setItem("numStars1",numStars1);
 
                 for (let i = 1; i <=5; i++)
                 {
-                    const stars = document.getElementById("stars" + i);
-                    if (i <= numStars)
+                    const stars1 = document.getElementById("stars" + i);
+                    if (i <= numStars1)
                     {
-                        stars.classList.add("checked");
+                        stars1.classList.add("checked");
                     }
                     else
                     {
-                        stars.classList.remove("checked")
+                        stars1.classList.remove("checked")
                     }
                 }
                 //document.getElementById("rating-value", numStars);
-                console.log(numStars);
+                console.log(numStars1);
             }
             //class name input function
-            function storeUserInput()
+            function storeUserInput1()
             {
-                const userInput = document.getElementById("userInput");
-                let className = userInput.value
-                localStorage.setItem("userClassName",className)
-                console.log(className)
+                const userInput1 = document.getElementById("userInput1");
+                let className1 = userInput1.value
+                localStorage.setItem("userClassName1",className1)
+                console.log(className1)
             }
             //diff level of the class
-            function storeInputDifficulty()
+            function storeInputDifficulty1()
             {
-                const inputDiff = document.getElementById("inputDiff");
-                let diffLevel = inputDiff.value
-                localStorage.setItem("userDifficultyLevel",diffLevel)
-                console.log(diffLevel)
+                const inputDiff1 = document.getElementById("inputDiff1");
+                let diffLevel1 = inputDiff1.value
+                localStorage.setItem("userDifficultyLevel1",diffLevel1)
+                console.log(diffLevel1)
             }
         
             //yes or no to the question of whether the user would take the class again
-            function yesOrNoClass()
+            function yesOrNoClass1()
             {
                 const yesButton = document.getElementById("yes2");
                 const noButton = document.getElementById("no2");
                 let result2;
                 if (yesButton.checked)
                 {
-                    result2 = "Yes";
+                    result21 = "Yes";
                 }
                 else if (noButton.checked)
                 {
-                    result2 = "No";                
+                    result21 = "No";                
                 }
 
-                localStorage.setItem("takeClassAgain",result2);
-                console.log(result2);
+                localStorage.setItem("takeClassAgain",result21);
+                console.log(result21);
             }
         
-            function otherComments()
+            function otherComments1()
             {
-                const userComment = document.getElementById("userComment");
-                let comment = userComment.value;
-                localStorage.setItem("otherComments",comment);
-                console.log(comment)
+                const userComment1 = document.getElementById("userComment1");
+                let comment1 = userComment1.value;
+                localStorage.setItem("otherComments1",comment1);
+                console.log(comment1)
             }
             
             //add display submission here 
 
-            function thanksForFillingForm()
+            function thanksForFillingForm1()
             {
-                const form = document.getElementById('form');
-                form.innerHTML = "<h1>Thank you for finishing the review form :) </h1>";
+                const form1 = document.getElementById('form1');
+                form1.innerHTML = "<h1>Thank you for finishing the review form :) </h1>";
             }
             
         </script>
@@ -159,7 +159,7 @@
     <p>
         <input type="radio" id="no" name="yes_no">No</input>
     </p>
-    <button onclick="yesOrNo()">Submit</button>
+    <button onclick="yesOrNo1()">Submit</button>
         <p id="result"></p>
     <!--enter photo here-->
     <br /> 
@@ -168,35 +168,35 @@
         Enter rating for <b id="bold">Professor Baldi</b> here (stars):
     </p>
     <div id="rating">
-        <button onclick="rate(1)">
+        <button onclick="rate1(1)">
             <span class="fa fa-star" id="stars1"></span>
         </button>
-        <button onclick="rate(2)">
+        <button onclick="rate1(2)">
             <span class="fa fa-star" id="stars2"></span>
         </button>
-        <button onclick="rate(3)">
+        <button onclick="rate1(3)">
             <span class="fa fa-star" id="stars3"></span>
         </button>
-        <button onclick="rate(4)">
+        <button onclick="rate1(4)">
             <span class="fa fa-star" id="stars4"></span>
         </button>
-        <button onclick="rate(5)">
+        <button onclick="rate1(5)">
             <span class="fa fa-star" id="stars5"></span>
         </button>
         <!--<p>Total rating: <span id="rating-value">0</span></p>-->
     </div>
     <br />
     <!--name of class-->
-    <label for="userInput">Class name: </label>
-    <input type = "text" id="userInput">
-    <button onclick="storeUserInput()">Submit</button>
-    <p id="displayClassName"></p>
+    <label for="userInput1">Class name: </label>
+    <input type = "text" id="userInput1">
+    <button onclick="storeUserInput1()">Submit</button>
+    <p id="displayClassName1"></p>
     
     <!--Difficulty level-->
-    <label for="inputDiff">Difficulty level of the class:</label>
-    <input type="text" id="inputDiff">
-    <button onclick="storeInputDifficulty()">Submit</button>
-    <p id="displayDiffLevel"></p>
+    <label for="inputDiff1">Difficulty level of the class:</label>
+    <input type="text" id="inputDiff1">
+    <button onclick="storeInputDifficulty1()">Submit</button>
+    <p id="displayDiffLevel1"></p>
 
     <!--Take class again?-->
     <label for="yes_no_radio">Would you take the class again?</label>
@@ -206,22 +206,27 @@
     <p>
         <input type="radio" id="no2" name="yes_no">No</input>
     </p>
-    <button onclick="yesOrNoClass()">Submit</button>
-    <p id="result2"></p>
+    <button onclick="yesOrNoClass1()">Submit</button>
+    <p id="result21"></p>
 
     <!--other comments the user might want to add-->
-    <label for="userComment">Other comments (or N/A):</label>
-    <input type="text" id="userComment">
-    <button onclick="otherComments()">Submit</button>
-    <p id="commentDisplay"></p>
+    <label for="userComment1">Other comments (or N/A):</label>
+    <input type="text" id="userComment1">
+    <button onclick="otherComments1()">Submit</button>
+    <p id="commentDisplay1"></p>
 
     <!-- Submit all button -->
-    <button onclick="thanksForFillingForm()">Submit All</button>
+    <button onclick="thanksForFillingForm1()">Submit All</button>
 
     <!--Thank you for finishing the review form-->
+<<<<<<< HEAD
     <div id="form" style="margin-top: 10px;"></div>
     <br/<br/>
     <a href="http://127.0.0.1:3000/prof2review.html" target="_self"style="font-size: 1.20em; background-color: #6096BA; padding: 15px;color:white;">Click to view Reviews!</a>
+=======
+    <div id="form1" style="margin-top: 10px;"></div>
+    <a href="http://127.0.0.1:3000/prof2review.html" target="_self">Click to view Reviews!</a>
+>>>>>>> 228b793f63db12142a3cd679328a36b4cccac7ee
     
 </body>
 <br/><br/><br/><br/>

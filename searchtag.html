@@ -1,0 +1,585 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS Faculty Data</title>
+    <script src='professors.js' defer></script>
+  </head>
+  <body>
+    <div id='facultyName'></div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="stylesheetsearch.css">
+    <title>ICS Faculty Data</title>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <input id="searchbar" onkeyup="search_tag()" type="text" placeholder="Search...">
+    </div>
+    <ul id='list'>
+        <li class="professorName">Sangeetha Abdu Jyothi</li>
+        <li class="professorName">Shannon Alfaro</li>
+        <li class="professorName">Ardalan Amiri Sani</li>
+        <li class="professorName">Pierre Baldi</li>
+        <li class="professorName">Alex Berg</li>
+        <li class="professorName">Elaheh (Eli) Bozorgazadeh</li>
+        <li class="professorName">Michael Carey</li>
+        <li class="professorName">Alfred Chen</li>
+        <li class="professorName">Rine Dechter</li>
+        <li class="professorName">Brian Demsky</li>
+        <li class="professorName">Michael Dillencourt</li>
+        <li class="professorName">Nikil Dutt</li>
+        <li class="professorName">Magda El Zarki</li>
+        <li class="professorName">David Eppstein</li>
+        <li class="professorName">Habiba Farrukh</li>
+        <li class="professorName">Charles Fowlkes</li>
+        <li class="professorName">Roy Fox</li>
+        <li class="professorName">Michael Franz</li>
+        <li class="professorName">Sergio Gago-Masague</li>
+        <li class="professorName">Irene Gassko</li>
+        <li class="professorName">Tony Givargis</li>
+        <li class="professorName">Michael Goodrich</li>
+        <li class="professorName">Ian Harris</li>
+        <li class="professorName">Wayne Hayes</li>
+        <li class="professorName">James Herold</li>
+        <li class="professorName">Alexander Ihler</li>
+        <li class="professorName">Mohsen Imani</li>
+        <li class="professorName">Sandy Irani</li>
+        <li class="professorName">Unnat Jain</li>
+        <li class="professorName">Stanislaw Jarecki</li>
+        <li class="professorName">Scott Jordan</li>
+        <li class="professorName">Sang-Woo Jun</li>
+        <li class="professorName">Kalev Kask</li>
+        <li class="professorName">Ray Flegstad</li>
+        <li class="professorName">Sven Koenig</li>
+        <li class="professorName">Marco Levorato</li>
+        <li class="professorName">Chen Li</li>
+        <li class="professorName">Aditi Majumder</li>
+        <li class="professorName">Stephen Mandt</li>
+        <li class="professorName">Gopi Meenakshisundaram</li>
+        <li class="professorName">Sharad Mehrotra</li>
+        <li class="professorName">Eric Mjolsness</li>
+        <li class="professorName">Faisal Nawab</li>
+        <li class="professorName">Alexandru Nicolau</li>
+        <li class="professorName">Ioannis Panageas</li>
+        <li class="professorName">Marios Papaefthymiou</li>
+        <li class="professorName">Michael Shindler</li>
+        <li class="professorName">Sameer Singh</li>
+        <li class="professorName">Padhraic Smyth</li>
+        <li class="professorName">Eric Sudderth</li>
+        <li class="professorName">Alex Thornton</li>
+        <li class="professorName">Gene Tsudik</li>
+        <li class="professorName">Vijay Vazirani</li>
+        <li class="professorName">Alexander Veidenabaum</li>
+        <li class="professorName">Nalini Venkatasubramanian</li>
+        <li class="professorName">Jennifer Wong-Ma</li>
+        <li class="professorName">Xiaohui Xie</li>
+        <li class="professorName">Thomas Yeh</li>
+        <li class="professorName">Jing Zhang</li>
+        <li class="professorName">Shuang Zhao</li>
+    </ul>
+
+    <script src="./professors.js"></script>
+  </head>
+  <body>
+    <h1>
+        ICS Faculty Directory
+    </h1>
+    <div id='facultyName'>
+        <button type="button">
+            Sangeetha Abdu Jyothi
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Shannon Alfaro
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Ardalan Amiri Sani
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Pierre Baldi
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Alex Berg
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Elaheh (Eli) Bozorgazadeh
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Michael Carey
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Alfred Chen
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Rine Dechter
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Brian Demsky
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Michael Dillencourt
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Nikil Dutt
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Magda El Zarki
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            David Eppstein
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Habiba Farrukh
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Charles Fowlkes
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Roy Fox
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Michael Franz
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Sergio Gago-Masague
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Irene Gassko
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Tony Givargis
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Michael Goodrich
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Ian Harris
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Wayne Hayes
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            James Herold
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Alexander Ihler
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Mohsen Imani
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Sandy Irani
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Unnat Jain
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Stanislaw Jarecki
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Scott Jordan
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Sang-Woo Jun
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Kalev Kask
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Ray Flegstad
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Sven Koenig
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Marco Levorato
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Chen Li
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Aditi Majumder
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Stephen Mandt
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Gopi Meenakshisundaram
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Sharad Mehrotra
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Eric Mjolsness
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Faisal Nawab
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Alexandru Nicolau
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Ioannis Panageas
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Marios Papaefthymiou
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Michael Shindler
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Sameer Singh
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Padhraic Smyth
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Eric Sudderth
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Alex Thornton
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Gene Tsudik
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Vijay Vazirani
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Alexander Veidenabaum
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+    <div id='facultyName'>
+        <button type="button">
+            Nalini Venkatasubramanian
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+
+    <div id='facultyName'>
+        <button type="button">
+            Jennifer Wong-Ma
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+
+    <div id='facultyName'>
+        <button type="button">
+            Xiaohui Xie
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+
+    <div id='facultyName'>
+        <button type="button">
+            Thomas Yeh
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+
+    <div id='facultyName'>
+        <button type="button">
+            Jing Zhang
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+
+    <div id='facultyName'>
+        <button type="button">
+            Shuang Zhao
+        </button> 
+        <p>
+            tag
+        </p>
+    </div>
+
+
+    
+
+
+  </body>
+</html>
