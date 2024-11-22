@@ -106,27 +106,15 @@
                 localStorage.setItem("otherComments",comment);
                 console.log(comment)
             }
-        
-            function displaySubmission()
+            
+            //add display submission here 
+
+            function thanksForFillingForm()
             {
-                const submissionArea = document.getElementById("submission"); // Correct reference to submission area
-
-                submissionArea.innerHTML = "";
-
-                const submission = document.createElement("div");
-                submission.classList.add("submission");
-                submission.innerHTML = `
-                    <p><strong>Class Name:</strong> ${className}</p>
-                    <p><strong>Difficulty Level:</strong> ${diffLevel}</p>
-                    <p><strong>Would you take the class again?</strong> ${result2}</p>
-                    <p><strong>Other comments:</strong> ${comment}</p>
-                    <p><strong>Rating:</strong> ${numStars}</p>
-                `;
-
-                submissionArea.appendChild(submission);
-
-                document.getElementById("rating-value").textContent = numStars;
+                const form = document.getElementById('form');
+                form.innerHTML = "<h1>Thank you for finishing the review form :) </h1>";
             }
+            
         </script>
         <a href="http://127.0.0.1:3000/prof1review.html"></a>
     </head>
@@ -199,10 +187,10 @@
     <p id="commentDisplay"></p>
 
     <!-- Submit all button -->
-    <button onclick="displaySubmission()">Submit All</button>
+    <button onclick="thanksForFillingForm()">Submit All</button>
 
-    <!-- Display all submissions -->
-    <div id="submission" style="margin-top: 20px;"></div>
+    <!--Thank you for finishing the review form-->
+    <div id="form" style="margin-top: 10px;"></div>
     
 </body>
 </html>
